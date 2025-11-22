@@ -110,7 +110,10 @@ func getAQIColor(aqi: Int?) -> Color {
 }
 
 func fetchAQI(completion: @escaping (Result<AirQualityData, Error>) -> Void) {
-    let apiKey = "9322d9a8-c928-43e5-a92e-7d53ce99723d" // Store this securely
+    guard let apiKey = apiKey(named: "AirVisualAPIKey") else {
+        print("API Key missing")
+        return
+    }
     let endpoint = "https://api.airvisual.com/v2/nearest_city?key=\(apiKey)"
 
     print("endpoint \(endpoint)")
@@ -135,6 +138,18 @@ func fetchAQI(completion: @escaping (Result<AirQualityData, Error>) -> Void) {
             completion(.failure(decoderError))
         }
     }.resume()
+}
+
+// Utility function to fetch the API key from the plist
+func apiKey(named key: String) -> String? {
+    guard
+        let url = Bundle.main.url(forResource: "APIKeys", withExtension: "plist"),
+        let data = try? Data(contentsOf: url),
+        let plist = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any]
+    else {
+        return nil
+    }
+    return plist[key] as? String
 }
 
 extension Color {
