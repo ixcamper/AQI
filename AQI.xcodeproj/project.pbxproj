@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AD791BC72ED0EDB5005B5A7C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD791BC62ED0EDB5005B5A7C /* WidgetKit.framework */; };
+		AD791BC92ED0EDB5005B5A7C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD791BC82ED0EDB5005B5A7C /* SwiftUI.framework */; };
+		AD791BD82ED0EDB6005B5A7C /* AQIWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD791BC42ED0EDB5005B5A7C /* AQIWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD791BD62ED0EDB6005B5A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD791BAA2ED0ED9B005B5A7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD791BC32ED0EDB5005B5A7C;
+			remoteInfo = AQIWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD791BDD2ED0EDB6005B5A7C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD791BD82ED0EDB6005B5A7C /* AQIWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AD791BB22ED0ED9B005B5A7C /* AQI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD791BC42ED0EDB5005B5A7C /* AQIWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AQIWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD791BC62ED0EDB5005B5A7C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AD791BC82ED0EDB5005B5A7C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AD791BD92ED0EDB6005B5A7C /* Exceptions for "AQIWidgetExtension" folder in "AQIWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AD791BC32ED0EDB5005B5A7C /* AQIWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AD791BB42ED0ED9B005B5A7C /* AQI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AQI;
+			sourceTree = "<group>";
+		};
+		AD791BCA2ED0EDB5005B5A7C /* AQIWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AD791BD92ED0EDB6005B5A7C /* Exceptions for "AQIWidgetExtension" folder in "AQIWidgetExtensionExtension" target */,
+			);
+			path = AQIWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD791BC12ED0EDB5005B5A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD791BC92ED0EDB5005B5A7C /* SwiftUI.framework in Frameworks */,
+				AD791BC72ED0EDB5005B5A7C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				AD791BB42ED0ED9B005B5A7C /* AQI */,
+				AD791BCA2ED0EDB5005B5A7C /* AQIWidgetExtension */,
+				AD791BC52ED0EDB5005B5A7C /* Frameworks */,
 				AD791BB32ED0ED9B005B5A7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				AD791BB22ED0ED9B005B5A7C /* AQI.app */,
+				AD791BC42ED0EDB5005B5A7C /* AQIWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AD791BC52ED0EDB5005B5A7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD791BC62ED0EDB5005B5A7C /* WidgetKit.framework */,
+				AD791BC82ED0EDB5005B5A7C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				AD791BAE2ED0ED9B005B5A7C /* Sources */,
 				AD791BAF2ED0ED9B005B5A7C /* Frameworks */,
 				AD791BB02ED0ED9B005B5A7C /* Resources */,
+				AD791BDD2ED0EDB6005B5A7C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD791BD72ED0EDB6005B5A7C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AD791BB42ED0ED9B005B5A7C /* AQI */,
@@ -69,6 +143,28 @@
 			productName = AQI;
 			productReference = AD791BB22ED0ED9B005B5A7C /* AQI.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AD791BC32ED0EDB5005B5A7C /* AQIWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD791BDA2ED0EDB6005B5A7C /* Build configuration list for PBXNativeTarget "AQIWidgetExtensionExtension" */;
+			buildPhases = (
+				AD791BC02ED0EDB5005B5A7C /* Sources */,
+				AD791BC12ED0EDB5005B5A7C /* Frameworks */,
+				AD791BC22ED0EDB5005B5A7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AD791BCA2ED0EDB5005B5A7C /* AQIWidgetExtension */,
+			);
+			name = AQIWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = AQIWidgetExtensionExtension;
+			productReference = AD791BC42ED0EDB5005B5A7C /* AQIWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					AD791BB12ED0ED9B005B5A7C = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					AD791BC32ED0EDB5005B5A7C = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				AD791BB12ED0ED9B005B5A7C /* AQI */,
+				AD791BC32ED0EDB5005B5A7C /* AQIWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AD791BB02ED0ED9B005B5A7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD791BC22ED0EDB5005B5A7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD791BC02ED0EDB5005B5A7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD791BD72ED0EDB6005B5A7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD791BC32ED0EDB5005B5A7C /* AQIWidgetExtensionExtension */;
+			targetProxy = AD791BD62ED0EDB6005B5A7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AD791BBB2ED0ED9C005B5A7C /* Debug */ = {
@@ -266,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.AQI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.aqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -298,11 +420,71 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.AQI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.aqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD791BDB2ED0EDB6005B5A7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P286Y9PK8S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AQIWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AQIWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.aqi.aqiwidgetext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD791BDC2ED0EDB6005B5A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P286Y9PK8S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AQIWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AQIWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suhas.aqi.aqiwidgetext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +509,15 @@
 			buildConfigurations = (
 				AD791BBE2ED0ED9C005B5A7C /* Debug */,
 				AD791BBF2ED0ED9C005B5A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD791BDA2ED0EDB6005B5A7C /* Build configuration list for PBXNativeTarget "AQIWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD791BDB2ED0EDB6005B5A7C /* Debug */,
+				AD791BDC2ED0EDB6005B5A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
