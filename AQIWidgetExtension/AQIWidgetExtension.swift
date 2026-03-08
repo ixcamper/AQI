@@ -65,7 +65,7 @@ struct AQIWidgetExtensionEntryView : View {
                 }
 
                 Text("\(String(describing: entry.aqiValue))")
-                    .font(.system(size: 65, weight: .heavy))
+                    .font(.system(size: 63, weight: .heavy))
                     .foregroundColor(.white)
             }
             .padding(2)
